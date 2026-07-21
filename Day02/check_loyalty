@@ -1,17 +1,18 @@
 #!/bin/bash
 
-
-read -p "Jethalal ne mud ke kisse dekha: " bandi 
-read -p "Jethalal ka pyar %" pyaar
+function is_loyal () {
+read -p "$1 ne mud ke kisse dekha: " bandi 
+read -p "$1 ka pyar %" pyaar
 
 if [[ $bandi == "daya bhabhi" ]];
 
 then  
-      echo "Jethalal is loyal"
+      echo "$1 is loyal"
 elif  [[ $pyaar -ge 100 ]];
 then 
-	echo "Jethalal is loyal"
+	echo " $1 is loyal"
 else
-      echo "Jethalal is not loyal"
-fi 
-
+      echo "$1 is not loyal"
+fi  
+}
+is_loyal "Hrutik"
